@@ -1,0 +1,36 @@
+{
+  "name": "recipe-book",
+  "version": "1.0.0",
+  "description": "Recipe Book App built with MERN Stack",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node --require dotenv/config index.js",
+    "dev": "cross-env NODE_ENV=development nodemon --require dotenv/config index.js",
+    "build": "cd client && npm install && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "client/*"
+    ]
+  },
+  "keywords": [
+    "recipe-book",
+    "react",
+    "node js"
+  ],
+  "author": "Maria Tatosh <tatosh098765@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.7"
+  }
+}

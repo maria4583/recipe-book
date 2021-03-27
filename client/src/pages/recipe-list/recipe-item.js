@@ -16,6 +16,8 @@ const useStyles = makeStyles(theme => ({
         width: 350,
         height: 290,
         marginBottom: '3rem',
+        backgroundColor: theme.palette.card.background,
+        border: theme.palette.card.border
     },
     media: {
         height: '100%'
@@ -28,7 +30,7 @@ const RecipeItem = ({ recipe }) => {
     return (
         <Grid item>
             <Badge badgeContent={formatDate(recipe.createdAt)} color="primary">
-                <Card className={classes.card}>
+                <Card className={classes.card} color="primary">
                     <Link to={`/recipe/${recipe._id}`}>
                         <CardHeader
                             title={recipe.title}

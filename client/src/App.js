@@ -11,21 +11,22 @@ import {
     Create
 } from '@/pages'
 import { Header } from '@/components'
-
-import '@/styles/base.css'
+import Theme from '@/styles/'
 
 const App = () => (
     <BrowserRouter>
-        <Header />
+        <Theme>
+            <Header />
 
-        <Container maxWidth="lg" style={{ padding: '3rem 0' }}>
-            <Switch>
-                <Route exact path="/" component={RecipeList} />
-                <Route exact path="/recipe/:id" component={RecipeView} />
-                <Route exact path="/recipe/:id/edit" component={RecipeEdit}/>
-                <Route exact path="/create" component={Create} />
-            </Switch>
-        </Container>
+            <Container maxWidth="lg" style={{ padding: '3rem 0' }}>
+                <Switch>
+                    <Route exact path="/" component={RecipeList} />
+                    <Route exact path="/recipe/:id" component={RecipeView} />
+                    <Route exact path="/recipe/:id/edit" component={RecipeEdit}/>
+                    <Route exact path="/create" component={Create} />
+                </Switch>
+            </Container>
+        </Theme>
     </BrowserRouter>
 )
 
